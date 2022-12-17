@@ -5,7 +5,7 @@ applications:
   memory: 1024M
   timeout: 300
   random-route: true
-  path: application/target/mycloudsdksample-application.jar
+  path: application/target/testapp-application.jar
   buildpacks:
     - sap_java_buildpack
   env:
@@ -14,5 +14,6 @@ applications:
     JBP_CONFIG_SAPJVM_MEMORY_SIZES: 'metaspace:128m..'
     JBP_CONFIG_COMPONENTS: "jres: ['com.sap.xs.java.buildpack.jdk.SAPMachineJDK']"
   services:
-  - sunrisedev
-  - fiori-destination
+  - my-xsuaa
+  - outlookcard
+  - my-connectivity
