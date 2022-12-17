@@ -1,0 +1,34 @@
+openapi: 3.0.0
+info:
+  title: ZOA Adaptive Card
+  version: 1.0.0
+paths:
+  /zoa:
+    post:
+      summary: Send to adaptive Card
+      operationId: postAdaptiveCard
+      x-sap-cloud-sdk-api-name: adaptiveCard
+      x-sap-cloud-sdk-operation-name: postAdaptiveCard
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                req_num:
+                  type: string
+                action_code: 
+                  type: string
+                submitter_userid:
+                  type: string
+                approver_userid: 
+                  type: string
+                approver_level: 
+                  type: string
+                comments:
+                  type: string
+      responses:
+        '201':
+          description: Created
+          content: 'application/json'
